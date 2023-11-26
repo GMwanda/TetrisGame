@@ -46,6 +46,10 @@ python main.py
 - **Cleared Rows**: Score increases for each row cleared.
 - **Down Button Clicks**: Increase the speed of falling blocks for an added challenge.
 
+## Game Interface
+
+![image](https://github.com/GMwanda/TetrisGame/assets/98454661/02ca4369-2213-4dd0-bd24-45ce41080cc4)
+
 ## Dependencies
 
 - [Python](https://www.python.org/)
