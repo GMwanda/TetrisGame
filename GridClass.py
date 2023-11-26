@@ -13,18 +13,18 @@ class grids_class():
         self.grid = [[0] * (self.number_cols) for _ in range(self.number_rows)]
         self.colors = color_class.get_cell_colors()
 
-    def draw_grid(self):
-        for row in range(self.number_rows):
-            for col in range(self.number_cols):
-                pass
-                # print(self.grid[row][col], end=" ")
-            # print()
+    # def draw_grid(self):
+    #     for row in range(self.number_rows):
+    #         for col in range(self.number_cols):
+    #             pass
+    #             # print(self.grid[row][col], end=" ")
+    #         # print()
 
     def draw(self, screen):
         for row in range(self.number_rows):
             for col in range(self.number_cols):
                 cell_value = self.grid[row][col]
-                cell_rect = pygame.Rect(col * self.cell_size + 1, row * self.cell_size + 1, self.cell_size - 1,
+                cell_rect = pygame.Rect(col * self.cell_size + 11, row * self.cell_size + 11, self.cell_size - 1,
                                         self.cell_size - 1)
                 pygame.draw.rect(screen, self.colors[cell_value], cell_rect)
 
@@ -60,3 +60,8 @@ class grids_class():
             elif completed > 0:
                 self.move_row_down(row, completed)
         return completed
+
+    def reset(self):
+        for row in range(self.number_rows):
+            for col in range(self.number_cols):
+                self.grid[row][col] = 0
